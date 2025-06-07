@@ -26,7 +26,7 @@ const Nav = () => {
             <nav className='w-full min-w-[300px] max-w-[1440px] flex justify-between items-center lg:py-[20px]  '>
                 {/* left section */}
                 <div className='flex gap-[24px] items-center'>
-                    <span className='size-20 sm:w-[110px] md:w-[129px] place-content-center place-items-center cursor-pointer'><img src={AppLogo} alt="logo" className='' /></span>
+                    <span className='size-20 sm:w-[110px] md:w-[129px] flex items-center cursor-pointer'><img src={AppLogo} alt="logo" className='' /></span>
 
                     {/* the search bar */}
                     <div>
