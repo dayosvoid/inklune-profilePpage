@@ -19,6 +19,7 @@ function App() {
 
        useEffect(()=>{
             document.body.style.overflow = editpage ? 'hidden' : 'auto';
+            document.body.style.height = editpage ? '100dvh' : 'auto';
         },[editpage])
      
      
