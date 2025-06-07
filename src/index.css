@@ -1,0 +1,14 @@
+*{
+  /* border: 1px solid greenyellow; */
+  font-family: Manrope;
+  
+}
+body{
+ background: hsla(0,0%,95%,1);
+}
+
+.liked{
+  fill: red;
+  color: red;
+}
+
