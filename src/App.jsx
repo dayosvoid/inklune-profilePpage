@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Nav from './components/Nav'
-import Profile from './components/profile';
+import Profile from './components/Profile';
 import Blog from './components/Blog'
 import Likedblog from './components/Likedblog';
 import EditBio from './components/EditBio';

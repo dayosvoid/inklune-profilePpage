@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import cancel from '../assets/blogs icon/cancel.svg'
 import image from '../assets/image/profile_picture.png'
 import addimg from '../assets/blogs icon/image.svg'
-import Profile from './profile'
 
 const EditBio = ({remove}) => {
   const [username, setUsername] = useState('')
