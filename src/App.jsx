@@ -28,7 +28,7 @@ function App() {
       <Nav/>
       <Router>
         
-      <div className='new container mx-auto relative top-[130px] flex flex-col gap-[42px] w-[736.5px]'>
+      <div className='new container w-11/12 mx-auto relative top-[130px] flex flex-col gap-[42px] w-[736.5px]'>
            {editpage && <div className='z-10 absolute h-2000 top-[-10px] sm:top-[-130px] lg:top-0 backdrop-blur-xs'><div className='mt-2 w-[736.5px] flex justify-center '><EditBio remove={showEditBio}/> </div></div>}
         <Profile ShowEditPage={showEditBio} />
         <Routes>
