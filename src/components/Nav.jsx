@@ -21,7 +21,7 @@ const Nav = () => {
     },[menu])
   return (
     <div className='backdrop-blur-lg border-b-2 border-gray-200 shadow-md fixed w-full z-3 lg:px-[100px] '>
-        <div className='container mx-auto w-11/12 flex'>
+        <div className='container mx-auto w-11/12 px-6 flex'>
             {/* the nav bar */}
             <nav className='w-full min-w-[300px] max-w-[1440px] flex justify-between items-center lg:py-[20px]  '>
                 {/* left section */}
