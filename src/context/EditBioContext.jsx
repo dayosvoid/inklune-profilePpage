@@ -1,7 +1,6 @@
 import React from 'react'
 import { createContext,useState } from 'react'
-import Profile from '../components/Profile';
-import EditBio from '../components/EditBio';
+
 const EditBioContext = createContext(null);
 
 
