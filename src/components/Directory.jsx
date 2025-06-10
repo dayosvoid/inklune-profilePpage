@@ -5,7 +5,7 @@ import SortFunction from '../context/SortFunction'
 import { useContext } from 'react'
 
 const Directory = () => {
-  const {togglePopular} = useContext(SortFunction)
+  const {togglePopular,toggleLatest} = useContext(SortFunction)
   const [button,setButton] = useState(true)
   // const [button2,setButton2] = useState(false)
   const yourButtons=()=>{
@@ -26,7 +26,9 @@ const Directory = () => {
     
 
     const lastestButton=()=>{
-    setButton2(false)}
+    setButton2(false)
+     toggleLatest()
+    }
 
     
     

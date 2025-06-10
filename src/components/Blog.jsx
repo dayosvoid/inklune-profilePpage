@@ -8,7 +8,7 @@ import SortFunction from '../context/SortFunction'
 
 
 const Blog = () => {
-    const {runPopular}=useContext(SortFunction)
+    const {runPopular,runLatest}=useContext(SortFunction)
     const [datas,setData] = useState(Api)
    
     console.log(datas)
@@ -32,7 +32,18 @@ const Blog = () => {
             sortData();
         }
     }, [runPopular])
-    
+
+    // to sort the blog based of likes(popuplar)
+    const sortByDate = [...datas].sort((a, b) => {
+    const dateA = new Date(a.date + ', 2025')
+    const dateB = new Date(b.date + ', 2025')
+    return dateA.getTime() - dateB.getTime()
+  })
+  useEffect(() => {
+        if (runLatest) {
+            sortByDate();
+        }
+    }, [runLatest])
   return (
     <div>
       <div className='flex flex-col gap-[16px] p-2'>

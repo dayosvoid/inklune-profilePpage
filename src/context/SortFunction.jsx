@@ -3,7 +3,7 @@ const SortFunction = createContext(null)
 
 export const SortFunctionProvider =({children})=>{
     const [runPopular,setRunPopular] = useState(false)
-    const [runLatest, setRunLatest] = useState(true)
+    const [runLatest, setRunLatest] = useState(false)
 
     // to toggle the popular state
     const togglePopular = ()=>{
@@ -12,10 +12,10 @@ export const SortFunctionProvider =({children})=>{
 
     // to toggle the Latest state
     const toggleLatest = ()=>{
-        setRunPopular(!runPopular)
+        setRunLatest(!runLatest)
     }
     return(
-        <SortFunction.Provider value={{togglePopular,runPopular}}>
+        <SortFunction.Provider value={{toggleLatest,runLatest,togglePopular,runPopular}}>
           {children}
         </SortFunction.Provider>)
 }
