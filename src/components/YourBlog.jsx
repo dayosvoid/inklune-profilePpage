@@ -6,6 +6,9 @@ import save from '../assets/blogs icon/stash_save-ribbon-light.svg'
 import meatball from '../assets/blogs icon/quill_meatballs-h.svg'
 import Menu from './Menu'
 import { useState } from 'react'
+import { useContext } from 'react'
+import EditBioContext from '../context/EditBioContext'
+
 
 const YourBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remove}) => {
     //half of the menu function cont(line 63)
@@ -34,13 +37,16 @@ const YourBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remove}) 
         setSave(!save)
     }
 
+     // importing  from useContext to change name on the yourblog
+    const {fixUsername} = useContext(EditBioContext)
+
   return (
     <div className='bg-white flex py-10 pr-10 pl-5 border-b-1 border-[hsla(0,0%,73%,1)]'>
         <div  className='flex flex-col gap-[16px]'>
             {/* header */}
             <div className='flex gap-[16px] items-center'>
                 <span className='size-10'><img src={img} alt="profile img" /></span>
-                <h2 className=' font-medium text-5'>{name}</h2>
+                <h2 className=' font-medium text-5'>{fixUsername}</h2>
             </div>
             {/* the text and image section */}
             <div className='flex gap-[48px] items-center h-[116px]'>

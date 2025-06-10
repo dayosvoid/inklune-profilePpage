@@ -15,7 +15,7 @@ const Nav = () => {
     const dropMenu = ()=>{
        setMenu(!menu)
     }
-
+    // to stop screen from scrolling when dropdown shows
     useEffect(()=>{
      document.body.style.overflow = menu ? 'hidden' : 'auto';
     },[menu])
