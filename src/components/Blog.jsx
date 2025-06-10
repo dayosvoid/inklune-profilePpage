@@ -2,7 +2,6 @@ import React from 'react'
 import Api from './api'
 import { useState,useEffect } from 'react'
 import YourBlog from './YourBlog'
-import Directory from './Directory'
 import { useContext } from 'react'
 import SortFunction from '../context/SortFunction'
 
@@ -34,11 +33,16 @@ const Blog = () => {
     }, [runPopular])
 
     // to sort the blog based of likes(popuplar)
-    const sortByDate = [...datas].sort((a, b) => {
-    const dateA = new Date(a.date + ', 2025')
-    const dateB = new Date(b.date + ', 2025')
-    return dateA.getTime() - dateB.getTime()
-  })
+    const sortByDate = () => {
+        console.log("Sorting by date (latest)");
+        const sorted = [...datas].sort((a, b) => {
+            const dateA = new Date(a.date + ', 2025')
+            const dateB = new Date(b.date + ', 2025')
+            return  dateB.getTime() - dateA.getTime()
+        });
+        setData(sorted);
+        console.log(sorted);
+    };
   useEffect(() => {
         if (runLatest) {
             sortByDate();
