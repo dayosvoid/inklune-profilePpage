@@ -7,7 +7,7 @@ import meatball from '../assets/blogs icon/quill_meatballs-h.svg'
 import Menu from './Menu'
 import { useState } from 'react'
 import { useContext } from 'react'
-import EditBioContext from '../src/context/EditBioContext.jsx'
+import EditBioContext from '../context/EditBioContext'
 
 
 const YourBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remove}) => {
