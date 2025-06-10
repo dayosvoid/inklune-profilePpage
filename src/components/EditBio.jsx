@@ -11,7 +11,7 @@ const EditBio = ({remove}) => {
    
   // the function that send the name change to the use context(stored in the save button)
  const changeUsername = (e)=>{
-  if (username.name.trim( )== '' || username.name.value.trim() == '' ){
+  if (username.name.trim( )== '' || username.name.trim() == '' ){
     e.preventDefault();
     console.log('no changes would be made')
     remove()

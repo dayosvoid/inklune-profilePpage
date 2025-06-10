@@ -6,8 +6,7 @@ import EditBioContext from '../context/EditBioContext';
 
 
 const Profile = ({ShowEditPage}) => {
-    const {bioname,fixUsername} =useContext(EditBioContext)
-   const [notify, setNotify] = useState(false)
+    const {bioname,fixUsername} = useContext(EditBioContext)
   return (
     <div>
         <div className='flex justify-center gap-[20px] px-3 w-full '>
