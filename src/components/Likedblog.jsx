@@ -32,7 +32,6 @@ const Likedblog = () => {
     
   return (
     <div>
-      <span><Directory sortData={sortData} /></span>
       <div className='flex flex-col gap-[16px] p-2'>
         
               {
