@@ -3,11 +3,13 @@ import Api from './api'
 import { useState } from 'react'
 import YourBlog from './YourBlog'
 import Directory from './Directory'
+import { useContext } from 'react'
+import SortFunction from '../context/SortFunction'
 
 
 const Blog = () => {
+    const {runPopular}=useContext(SortFunction)
     const [datas,setData] = useState(Api)
-    const [sort, setSort] = useState(true)
    
     console.log(datas)
     
@@ -20,16 +22,19 @@ const Blog = () => {
    
   // to sort the blog based of likes(popuplar)
    const sortData=()=>{
-    console.log(12345)
-    setSort(!sort)
-  if(sort){
-  const sorted = [...datas].sort((a,b)=> b.likes - a.likes)
+   console.log(12345)
+   const sorted = [...datas].sort((a,b)=> b.likes - a.likes)
     setData(sorted)
     console.log(sorted)}
-  }
+  
+    useEffect(() => {
+        if (runPopular) {
+            sortData();
+        }
+    }, [runPopular])
+    
   return (
     <div>
-      <span><Directory sortData={sortData} /></span>
       <div className='flex flex-col gap-[16px] p-2'>
             {
             datas.map((data)=>{

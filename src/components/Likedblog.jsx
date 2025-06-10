@@ -2,11 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import Api from './api'
 import EachikedBlog from './EachikedBlog'
-import Directory from './Directory'
+import { useContext } from 'react'
+import SortFunction from '../context/SortFunction'
 
 const Likedblog = () => {
+  const {runPopular}=useContext(SortFunction)
     const [datas,setData] = useState(Api)
-    const [sort, setSort] = useState(true)
     
 
     // removing each blog when delete is click
@@ -19,12 +20,15 @@ const Likedblog = () => {
    // to sort the blog based of likes(popuplar)
   const sortData=()=>{
    console.log(12345)
-   setSort(!sort)
-  if(sort){
-  const sorted = [...datas].sort((a,b)=> b.likes - a.likes)
+   const sorted = [...datas].sort((a,b)=> b.likes - a.likes)
     setData(sorted)
     console.log(sorted)}
-  }
+  
+    useEffect(() => {
+        if (runPopular) {
+            sortData();
+        }
+    }, [runPopular])
     
   return (
     <div>

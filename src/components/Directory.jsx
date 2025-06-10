@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { useState } from 'react'
+import SortFunction from '../context/SortFunction'
 
-const Directory = ({sortData}) => {
+const Directory = () => {
+  const {togglePopular} = useContext(SortFunction)
   const [button,setButton] = useState(true)
   // const [button2,setButton2] = useState(false)
   const yourButtons=()=>{
@@ -17,7 +19,7 @@ const Directory = ({sortData}) => {
 
     const popularButton=(callback)=>{
     setButton2(true);
-    sortData()
+    togglePopular()//from sortFunction
     }
 
     
