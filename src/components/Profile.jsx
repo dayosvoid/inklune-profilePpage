@@ -1,7 +1,7 @@
 import React from 'react'
 import { PencilLine } from 'lucide-react';
 import profileImg from '../assets/image/profile_picture.png'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import EditBioContext from '../context/EditBioContext';
 
 
