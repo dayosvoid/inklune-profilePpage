@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { useState } from 'react'
 import SortFunction from '../context/SortFunction'
+import { useContext } from 'react'
 
 const Directory = () => {
   const {togglePopular} = useContext(SortFunction)
