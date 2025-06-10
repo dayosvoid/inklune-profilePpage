@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Api from './api'
 import EachikedBlog from './EachikedBlog'
 import { useContext } from 'react'

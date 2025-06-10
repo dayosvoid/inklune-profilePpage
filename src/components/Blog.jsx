@@ -1,6 +1,6 @@
 import React from 'react'
 import Api from './api'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import YourBlog from './YourBlog'
 import Directory from './Directory'
 import { useContext } from 'react'
