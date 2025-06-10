@@ -3,7 +3,7 @@ import { PencilLine } from 'lucide-react';
 import profileImg from '../assets/image/profile_picture.png'
 import { useState } from 'react';
 import { useState } from 'react';
-import EditBioContext from '../context/EditBioContext';
+import EditBioContext from '../src/context/EditBioContext.jsx';
 
 
 const Profile = ({ShowEditPage}) => {

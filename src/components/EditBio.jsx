@@ -3,7 +3,7 @@ import cancel from '../assets/blogs icon/cancel.svg'
 import image from '../assets/image/profile_picture.png'
 import addimg from '../assets/blogs icon/image.svg'
 import { useContext } from 'react'
-import EditBioContext from '../context/EditBioContext'
+import EditBioContext from '../src/context/EditBioContext.jsx'
 
 const EditBio = ({remove}) => {
   const { setFixUsername,setbioname} = useContext(EditBioContext)
