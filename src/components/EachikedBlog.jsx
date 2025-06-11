@@ -93,7 +93,7 @@ const EachikedBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remov
                 </div>
             </div>
         </div>
-            {!liked && <span className='text-[12px] text-gray-500 absolute bottom-2'>Deleting...</span>}
+            {!liked && <span className='text-[12px] text-gray-500 absolute bottom-2'>Removing...</span>}
     </div>
   )
 }
