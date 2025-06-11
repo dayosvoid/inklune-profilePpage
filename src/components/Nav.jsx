@@ -74,6 +74,9 @@ const Nav = () => {
                 </div>
             </nav>
         </div>
+         {
+                menu && <div className=' fixed z-2 min-w-full top-22 md:hidden'><NavMenu/></div>
+            }
     </div>
   )
 }
