@@ -7,7 +7,7 @@ import Searchbar from '../assets/nav_icon/stash_search-solid.png'
 const NavMenu = () => {
   return (
     
-<div className=' z-100 min-w-full bg-white px-5 py-[30px] flex justify-center items-center'>
+<div className=' z-100 min-w-full bg-white h- px-5 py-[30px] flex justify-center items-center'>
           {/* <div>
               <form action="" className='flex outline-3 outline-gray-300 gap-[4px] items-center py-[5px] pl-[20px] w-full rounded-full inset-shadow-sm inset-shadow-gray-500/20'>
                   <button className=''><img src={Searchbar} alt="" className='size-[24px] cursor-pointer'/></button>

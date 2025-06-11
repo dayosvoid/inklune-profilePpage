@@ -53,9 +53,9 @@ const Nav = () => {
                         
 
                     </div>
-                    {
+                    {/* {
                         menu && <div className=' absolute z-10 right-0 top-15 left-[-170px] md:hidden'><NavMenu/></div>
-                    }
+                    } */}
 
                     <div className='hidden md:flex gap-[28px] items-center'>
                         <span className='cursor-pointer'>
@@ -63,8 +63,9 @@ const Nav = () => {
                         </span>
 
                         
-                        <span className='w-[20%] cursor-pointer'>
+                        <span className='w-[20%] relative cursor-pointer'>
                             <button className='flex cursor-pointer'><Bell className=''/></button>
+                            <span className='absolute opacity-0 pt-7 hover:opacity-100 left-[-10px] top-0 text-[10px] font-100 text-nowrap'><span className='bg-[#c5c4c5] text-gray-800 rounded-3xl px-2 py-[2px]'>No Notif...</span></span>
                         </span>
 
                         <span>
