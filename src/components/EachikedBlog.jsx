@@ -54,7 +54,7 @@ const EachikedBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remov
         
   return (
            <div className='bg-white flex py-5  md:py-10 px-3   md:pr-10 md:pl-5 border-b-1 border-[hsla(0,0%,73%,1)]'>
-        <div  className='flex flex-col gap-[30px] w-full'>
+        <div  className='flex flex-col gap-[35px] md:gap-[15px] w-full'>
             {/* header */}
             <div className='flex gap-[16px] items-center'>
                 <span className='size-10'><img src={img} alt="profile img" /></span>
@@ -76,7 +76,7 @@ const EachikedBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remov
                 </div>
             </div>
             {/* the likes and comment section  */}
-            <div className='flex justify-between w-full  md:w-[526px]'>
+            <div className='flex pt-2 justify-between w-full  md:w-[526px]'>
                 {/* left */}
                 <div className='flex gap-[16px]'>
                     <p className='font-normal text-[14px] text-[hsla(0,0%,64%,1)]'>{date}</p>
@@ -90,7 +90,7 @@ const EachikedBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remov
                     {save && <span className='absolute right-[35px] text-[12px]  bottom-[-15px] font-semibold text-[hsla(0,0%,64%,1)]'>saved</span>}
                     <button className='cursor-pointer' onClick={showMenu}><img src={meatball} alt="" /></button> 
 
-                    <div className='absolute right-[-100px] top-[-100px] '>{ menu && <Menu remove={remove} id={id} />} </div> 
+                    <div className='absolute left-[-60px]  top-[-100px] '>{ menu && <Menu remove={remove} id={id} />} </div> 
 
                 </div>
             </div>
