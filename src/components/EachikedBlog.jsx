@@ -53,7 +53,7 @@ const EachikedBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remov
         
         
   return (
-           <div className='bg-white flex py-5  md:py-10 px-3   md:pr-10 md:pl-5 border-b-1 border-[hsla(0,0%,73%,1)]'>
+           <div className='bg-white flex py-6  md:py-10 px-3   md:pr-10 md:pl-5 border-b-1 border-[hsla(0,0%,73%,1)] relative'>
         <div  className='flex flex-col gap-[35px] md:gap-[15px] w-full'>
             {/* header */}
             <div className='flex gap-[16px] items-center'>
