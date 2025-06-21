@@ -53,33 +53,35 @@ const EachikedBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remov
         
         
   return (
-    <div className='bg-white flex py-10 pr-10 pl-5 border-b-1 border-[hsla(0,0%,73%,1)] w-[100%] relative'>
-        <div  className='flex flex-col gap-[16px]'>
+           <div className='bg-white flex py-5  md:py-10 px-3   md:pr-10 md:pl-5 border-b-1 border-[hsla(0,0%,73%,1)]'>
+        <div  className='flex flex-col gap-[30px] w-full'>
             {/* header */}
             <div className='flex gap-[16px] items-center'>
                 <span className='size-10'><img src={img} alt="profile img" /></span>
                 <h2 className=' font-medium text-5'>{name}</h2>
             </div>
             {/* the text and image section */}
-            <div className='flex gap-[48px] items-center h-[116px]'>
+            <div className='flex justify-between items-center h-[116px]'>
                 <div className='flex flex-col gap-8px '>
-                    <span className='w-[450px]'>
+                    <span className='w-full md:w-[450px]'>
                         <h3 className='font-extrabold text-5 leading-[30px]  text-[hsla(0,0%,20%,1)]'>{title}</h3>
                     </span>
                     
-                    <p className='text-4 font-normal text-[hsla(0,0%,47%,1)]'>{text}</p>
+                     <span className='w-full'>
+                      <p className='text-2 md:text-4 font-medium text-pretty md:font-normal text-[hsla(0,0%,47%,1)]'>{text}</p>  
+                    </span>
                 </div>
-                <div className='size-full flex justify-end '>
-                <span className='size-[116px]'><img src={postedImg} alt="post photo" className='' /></span>
+                <div className='size-full flex justify-end items-center'>
+                <span className='size-[70px] md:size-[116px]'><img src={postedImg} alt="post photo" className='' /></span>
                 </div>
             </div>
             {/* the likes and comment section  */}
-            <div className='flex justify-between w-[526px]'>
+            <div className='flex justify-between w-full  md:w-[526px]'>
                 {/* left */}
                 <div className='flex gap-[16px]'>
                     <p className='font-normal text-[14px] text-[hsla(0,0%,64%,1)]'>{date}</p>
-                    <span className='flex items-center text-[12px] gap-1 text-[hsla(0,0%,56%,1)] font-normal'><button onClick={likePost}><Heart style={{fill: liked ? 'red' : 'white', color: liked? 'red' : 'black'}} className='cursor-pointer'/></button><p className='inline'>{count}</p></span>
-                    <span className='flex items-center text-[12px] gap-1 text-[hsla(0,0%,56%,1)] font-normal'><button><img src={comments} alt="" /></button>{comment}</span>
+                    <span className='flex items-center text-[10px]  md:text-[12px] gap-1 text-[hsla(0,0%,56%,1)] font-normal'><button onClick={likePost}><Heart style={{fill: liked ? 'red' : 'white', color: liked? 'red' : 'black'}} className='cursor-pointer'/></button><p className='inline'>{count}</p></span>
+                    <span className='flex items-center text-[10px]  md:text-[12px] gap-1 text-[hsla(0,0%,56%,1)] font-normal'><button><img src={comments} alt="" /></button>{comment}</span>
                 </div>
                 {/* right */}
                 <div className='flex gap-4 relative '>
