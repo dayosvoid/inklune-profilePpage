@@ -64,7 +64,7 @@ const EachikedBlog = ({name,id,title,text,date,comment,likes,postedImg,img,remov
             <div className='flex justify-between items-center h-[116px]'>
                 <div className='flex flex-col gap-8px '>
                     <span className='w-full md:w-[450px]'>
-                        <h3 className='font-extrabold text-5 leading-[30px]  text-[hsla(0,0%,20%,1)]'>{title}</h3>
+                        <h3 className='font-extrabold text-5 md:leading-[30px]  text-[hsla(0,0%,20%,1)]'>{title}</h3>
                     </span>
                     
                      <span className='w-full'>
